@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigiCraft - Artisan Login</title>
+    <link rel="stylesheet" href="artisanlogin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-header">
+            <div class="logo">
+                <h1>Digi<span>Craft</span></h1>
+                <p>Artisan Portal</p>
+            </div>
+            <i class="fas fa-hammer"></i>
+        </div>
+        
+        <div class="login-form">
+            <h2>Artisan Login</h2>
+            <p>Access your seller dashboard</p>
+            
+            <form action="ArtisanLogin" method="post">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="aemail" id="email" placeholder="your@email.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" name="apass" id="password" placeholder="••••••••" required>
+                </div>
+                
+                <div class="remember-forgot">
+                    <div class="remember-me">
+                        <input type="checkbox" id="remember">
+                        <label for="remember">Remember me</label>
+                    </div>
+                    <a href="#" class="forgot-password">Forgot password?</a>
+                </div>
+                
+                <button type="submit" class="login-btn">Login</button>
+                
+                <div class="divider">
+                    <span>or</span>
+                </div>
+                
+                <button type="button" class="social-login google">
+                    <i class="fab fa-google"></i> Continue with Google
+                </button>
+                
+                <button type="button" class="social-login facebook">
+                    <i class="fab fa-facebook-f"></i> Continue with Facebook
+                </button>
+            </form>
+        </div>
+        
+        <div class="login-footer">
+            <p>New to DigiCraft? <a href="artisanregistration.html">Become an Artisan</a></p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+# Eclipse workspace files
+.metadata/
+
+# Compiled Java files
+*.class
+ImportedClasses/
+build/
+
+# Temporary files
+*.log
+*.tmp
+
+# IDE files
+*.launch
+
+# Operating system files
+.DS_Store
+Thumbs.db

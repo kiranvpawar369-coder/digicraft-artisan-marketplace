@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register Buyer - DigiCraft</title>
+  <style>
+    body {
+      background-color: #f5f7fa;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .form-container {
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #2c3e50;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      color: #2c3e50;
+      font-size: 15px;
+    }
+
+    .form-group input, .form-group textarea {
+      width: 100%;
+      padding: 12px 14px;
+      font-size: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      background-color: #fefefe;
+    }
+
+    .form-group input:focus, .form-group textarea:focus {
+      border-color: #e74c3c;
+      outline: none;
+    }
+
+    .submit-btn {
+      width: 100%;
+      background-color: #e74c3c;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #c0392b;
+    }
+
+    .note {
+      margin-top: 15px;
+      font-size: 13px;
+      text-align: center;
+      color: #7f8c8d;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Register Buyer</h2>
+    <form action="BuyerRegistration" method="post">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" name="bname" id="name" required />
+      </div>
+
+      <div class="form-group">
+        <label for="contact">Contact Number</label>
+        <input type="tel" name="bcontact" id="contact" pattern="[0-9]{10}" maxlength="10" required />
+      </div>
+
+      <div class="form-group">
+        <label for="address">Address</label>
+        <textarea name="baddress" id="address" rows="3" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" name="bemail" id="email" required />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Create Password</label>
+        <input type="password" name="bpass" id="password" required />
+      </div>
+
+      <button type="submit" class="submit-btn">Register</button>
+    </form>
+    <p class="note">Already registered? Login or contact admin for help.</p>
+  </div>
+</body>
+</html>

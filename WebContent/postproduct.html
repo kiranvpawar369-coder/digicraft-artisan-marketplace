@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DigiCraft | Post Product</title>
+</head>
+<body style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f9f9f9; padding: 60px 20px;">
+
+  <div style="max-width: 600px; margin: auto; background-color: #fff; padding: 30px 40px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+    <h2 style="text-align: center; color: #e74c3c; margin-bottom: 30px;">Post New Product</h2>
+
+    <form action="PostProduct" method="post">
+      <!-- Product Name -->
+      <label style="display: block; margin-bottom: 8px; font-weight: 500;">Product Name</label>
+      <input type="text" name="productName" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; margin-bottom: 20px; font-size: 16px;">
+
+      <!-- Description -->
+      <label style="display: block; margin-bottom: 8px; font-weight: 500;">Description</label>
+      <textarea name="description" rows="4" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; margin-bottom: 20px; font-size: 16px;"></textarea>
+
+      <!-- Price -->
+      <label style="display: block; margin-bottom: 8px; font-weight: 500;">Price (₹)</label>
+      <input type="number" name="price" required min="1" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; margin-bottom: 20px; font-size: 16px;">
+
+      <!-- Stock -->
+      <label style="display: block; margin-bottom: 8px; font-weight: 500;">Stock Quantity</label>
+      <input type="number" name="stock" required min="1" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; margin-bottom: 20px; font-size: 16px;">
+
+      <!-- Post Date -->
+      <label style="display: block; margin-bottom: 8px; font-weight: 500;">Post Date</label>
+      <input type="date" name="postDate" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; margin-bottom: 30px; font-size: 16px;">
+
+      <!-- Submit Button -->
+      <button type="submit" style="width: 100%; background-color: #3498db; color: white; border: none; padding: 14px; border-radius: 6px; font-size: 16px; font-weight: 600; cursor: pointer;">
+        Submit Product
+      </button>
+    </form>
+  </div>
+
+</body>
+</html>
