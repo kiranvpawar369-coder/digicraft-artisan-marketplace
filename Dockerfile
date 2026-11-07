@@ -1,8 +1,7 @@
 FROM tomcat:9.0-jdk8-temurin
 
 # Copy DigiCraft application into Tomcat
-COPY DigiCraft.war /usr/local/tomcat/webapps/ROOT.war
-
+COPY Digital_Craft.war /usr/local/tomcat/webapps/ROOT.war
 # Expose application port
 EXPOSE 8080
 
