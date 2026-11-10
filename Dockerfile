@@ -1,9 +1,12 @@
-FROM tomcat:9.0-jdk8-temurin
 
-# Copy DigiCraft application into Tomcat
-COPY Digital_Craft.war /usr/local/tomcat/webapps/ROOT.war
-# Expose application port
-EXPOSE 8080
+FROM tomcat:9.0-jre8-temurin
 
-# Start Tomcat using Render's assigned port
-CMD ["sh", "-c", "sed -i 's/port=\"8080\"/port=\"'\"${PORT:-8080}\"'\"/' \"$CATALINA_HOME/conf/server.xml\" && catalina.sh run"]
+RUN sed -i 's/port="8080"/port="10000"/' /usr/local/tomcat/conf/server.xml
+
+COPY ROOT.war /usr/local/tomcat/webapps/ROOT.war
+
+COPY tidb-truststore.jks /usr/local/tomcat/conf/tidb-truststore.jks
+
+EXPOSE 10000
+
+CMD ["catalina.sh", "run"]
